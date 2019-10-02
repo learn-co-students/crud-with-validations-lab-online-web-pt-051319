@@ -1,4 +1,4 @@
-<h1>Editing <%= @song.title %> by <%= @song.artist_name %></h1>
+<h1>Create a Song</h1>
 
 <%= form_for(@song) do |f| %>
   <% if @song.errors.any? %>
@@ -37,5 +37,3 @@
   <%= f.submit %>
 </div>
 <% end %>
-
-<%= link_to 'Cancel Editing', @song %>
