@@ -1,0 +1,28 @@
+<h1>Song List</h1>
+<table>
+	<% if @songs.empty? %>
+	<h2>There are no songs</h2>
+	<% else %>
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Artist Name</th>
+			<th>Genre</th>
+			<th>Released?</th>
+			<th>Release Year</th>
+		</tr>
+	</thead>
+		<% @songs.each do |song| %>
+		<tbody>		
+			<tr>
+				<td><%= link_to( song.title, song ) %></td>
+				<td><%= song.artist_name %></td>
+				<td><%= song.genre %></td>
+				<td><%= song.released %></td>
+				<td><%= song.release_year %></td>
+			</tr>
+		</tbody>
+		<% end %>
+	<% end  %>
+</table>
+<%= link_to("Add a Song", new_song_path) %>

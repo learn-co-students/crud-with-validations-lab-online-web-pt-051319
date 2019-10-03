@@ -1,0 +1,9 @@
+<div class="title">
+	<h1><%= @song.title %></h1>
+	<%= button_to("Delete", { action: "destroy", id: @song.id },
+                                method: :delete, data: { confirm: "Are you sure?" } ) %>
+</div>
+<h2><%= @song.artist_name %></h2>
+<h2><%= @song.genre %></h2>
+<h2><%= @song.released ? "Released in #{@song.release_year}" : "Not yet released" %></h2>
+<%= link_to("Back", songs_path) %>
