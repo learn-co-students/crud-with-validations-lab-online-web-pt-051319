@@ -19,3 +19,44 @@
   background-color: red;
   display: table;
 }
+
+td, th {
+	text-align: left;
+}
+
+table {
+	width: 50%;
+	margin-bottom: 2%;
+}
+
+a  {
+	text-decoration: none;
+}
+
+body>a, input {
+	color: blue;
+	font-size: 1rem;
+	border: solid black 1px;
+	border-radius: 20px;
+	padding: .5rem 1rem;
+}
+
+form {
+	margin-bottom: 2%;
+}
+
+input {
+	background: none;
+	cursor: pointer;
+}
+
+.title {
+	display: flex;
+	align-items: baseline;
+	justify-content: flex-start;
+}
+
+
+.title>h1 {
+	margin-right: 3rem;
+}
