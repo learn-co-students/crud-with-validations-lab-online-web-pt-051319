@@ -1,0 +1,7 @@
+<h2><%= @song.title %> - <%= @song.artist_name %></h2>
+<strong>Genre: <%= @song.genre %></strong>
+<br>
+<strong><%= @song.released ? "Release Date: #{@song.release_year}" : "Not released" %></strong>
+<br>
+<%= link_to 'Edit', edit_song_path(@song) %>
+<%= link_to "Delete", @song, method: :destroy, data: { confirm: "Positive?" } %>
