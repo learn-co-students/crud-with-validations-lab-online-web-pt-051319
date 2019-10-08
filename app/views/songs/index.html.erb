@@ -1,0 +1,36 @@
+<h1>Songs</h1>
+
+<table>
+    <% if @songs.empty? %>
+        <h2>There are no songs</h2>
+    <% else %>
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Artist Name</th>
+            <th>Release Year</th>
+        </tr>
+
+        <% @songs.each do |s| %>
+            <tbody>
+                <tr>
+                    <td><%= s.title %></td>
+                    <td<%= s.genre %></td>
+                    <td<%= s.artist_name %></td>
+                    <td<%= s.release_year %></td>
+
+                    <td>
+                        <%= link_to 'View', s %> |
+                        <%= link_to 'Edit', edit_song_path(s) %> |
+                        <%= link_to 'Delete', s, method: :delete, data: { confirm: 'For real?' } %>
+                    </td>
+                </tr>
+            </tbody>
+        <% end %>
+    <% end %>
+</table>
+
+<br>
+
+<div><%= link_to 'Create Song', new_song_path %></div>
+
